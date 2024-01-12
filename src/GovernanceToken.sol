@@ -17,6 +17,10 @@ contract GovToken is ERC20, ERC20Permit, ERC20Votes {
         super._update(from, to, value);
     }
 
+    function mint(address to, uint256 amount) public {
+        _mint(to, amount);
+    }
+
     function nonces(address owner)
         public
         view
